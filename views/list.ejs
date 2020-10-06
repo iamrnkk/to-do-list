@@ -1,0 +1,13 @@
+<%-include("partial/header.ejs");-%>
+    <h1><%=day%></h1>
+    <form class="" action="/" method="post">
+      <ul>
+        <%items.forEach(function(item){%>
+        <li> <%=item%> </li>
+        <%})%>
+
+      </ul>
+      <input type="text" name="newItem" value="" autocomplete="off">
+      <button type="submit" name="button">+</button>
+    </form>
+<%-include("partial/footer.ejs");-%>
