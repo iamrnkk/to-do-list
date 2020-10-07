@@ -4,8 +4,9 @@ const bodyParser = require("body-parser");
 const app= new express();
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 
-var items = ['study','code','eat']
+var items = ['study','code','eat'];
 
 app.get("/",function(req,res){
 

@@ -1,13 +1,19 @@
 <%-include("partial/header.ejs");-%>
-    <h1><%=day%></h1>
-    <form class="" action="/" method="post">
-      <ul>
-        <%items.forEach(function(item){%>
-        <li> <%=item%> </li>
-        <%})%>
+<div class="box container" id="heading">
+  <h1><%=day%></h1>
+</div>
+<div class="box container">
+  <%items.forEach(function(item){%>
+  <div class="item">
+    <input type="checkbox">
+    <p><%=item%></p>
+  </div>
+  <%})%>
+  <form class="form-inline" action="/" method="post">
+    <input class="form-control mr-sm-2" type="text" name="newItem" placeholder="New Item" value="" autocomplete="off">
+    <button type="submit" name="button">+</button>
+  </form>
+</div>
 
-      </ul>
-      <input type="text" name="newItem" value="" autocomplete="off">
-      <button type="submit" name="button">+</button>
-    </form>
+
 <%-include("partial/footer.ejs");-%>
