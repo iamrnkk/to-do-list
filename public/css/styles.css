@@ -13,7 +13,7 @@ body{
 h1 {
   color: #fff;
   padding: 10px;
-  font-size: calc(1em + 3vmin);
+  font-size: calc(1em + 2.5vmin);
 }
 
 .box {
@@ -57,7 +57,7 @@ p {
   color: #00204a;
 }
 
-form {
+form.item{
   text-align: center;
 }
 

@@ -4,16 +4,19 @@
 </div>
 <div class="box container">
   <%items.forEach(function(item){%>
-  <div class="item">
-    <input type="checkbox">
-    <p><%=item%></p>
-  </div>
+  <form  action="/delete" method="post">
+    <div class="item">
+      <input type="checkbox" name="checkbox" value="<%=item._id %>" onChange="this.form.submit()">
+      <p><%=item.name%></p>
+    </div>
+  </form>
+
   <%})%>
   <form class="form-inline" action="/" method="post">
     <input class="form-control mr-sm-2" type="text" name="newItem" placeholder="New Item" value="" autocomplete="off">
     <button type="submit" name="button">+</button>
   </form>
 </div>
-
+<footer><strong>&copy; Raunak</strong></footer>
 
 <%-include("partial/footer.ejs");-%>
